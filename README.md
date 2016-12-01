@@ -5,7 +5,7 @@ I'm using various languages to provide solutions.
 
 | Day | Name                                           | D    | Haskell | Python | Ruby | Shakespeare |
 |:---:|:-----------------------------------------------|:----:|:-------:|:------:|:----:|:-----------:|
-| 01  |                                                |      |         |        |      |             |
+| 01  | No Time for a Taxicab                          |      |         |        | [:heavy_check_mark:](./day01/main.rb) |             |
 
 [day1]: http://adventofcode.com/2016/day/1
 
