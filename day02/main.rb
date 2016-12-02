@@ -4,8 +4,6 @@ InputData = File.read('data.txt')
 .split("\n")
 .map{ |line| line.each_char.map(&:to_sym) }
 
-
-
 KeyboardToPosTask1 = (0..2).map{ |x|
 	(0..2).map{ |y|
 		[(1 + x + y * 3).to_s, Matrix[[x, y]]]
@@ -47,7 +45,6 @@ Direction = {
 	D: Matrix[[ 0, 1]],
 }
 
-
 def make_path(sanitizer, ktp, ptk)
 	InputData
 	.flatten
@@ -73,8 +70,6 @@ def solve_task(sanitizer, ktp)
 	.map{|n| ptk[path[n-1]]}
 	.join
 end
-
-# PathTask1 = make_path(:sanitize_matrix_task_1, KeyboardToPosTask1, PosToKeyboardTask1)
 
 puts 'Task 1: %s' % solve_task(:sanitize_matrix_task_1, KeyboardToPosTask1)
 puts 'Task 2: %s' % solve_task(:sanitize_matrix_task_2, KeyboardToPosTask2)
