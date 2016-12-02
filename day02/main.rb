@@ -48,8 +48,7 @@ Direction = {
 def make_path(sanitizer, ktp, ptk)
 	InputData
 	.flatten
-	.map
-	.with_object({current: '5', arr: []}){ |dir, h|
+	.inject({current: '5', arr: []}){ |h, dir|
 		current = ktp[h[:current]]
 		next_pos = current + Direction[dir]
 		next_pos = send(sanitizer, next_pos) ? next_pos : current
